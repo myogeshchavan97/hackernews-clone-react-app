@@ -1,0 +1,121 @@
+$base-text-color: #e17055;
+$link-color: #b55a44;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  color: $base-text-color;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+}
+
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.5)
+  );
+
+  .message {
+    position: relative;
+    transform: translate(-5%, -5%);
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+  }
+}
+
+.loader-open {
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin: 10px;
+    text-transform: uppercase;
+    color: inherit;
+    letter-spacing: 2px;
+  }
+}
+
+.story {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+
+  .story-title {
+    margin-bottom: 4px;
+    a:link,
+    a:visited {
+      font-size: 18px;
+      color: $base-text-color;
+    }
+
+    a:hover,
+    a:active {
+      text-decoration: none;
+    }
+  }
+
+  .story-info {
+    color: $link-color;
+    span {
+      margin: 4px;
+    }
+    a {
+      color: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    flex-direction: column;
+  }
+  .story {
+    width: 90%;
+  }
+}
