@@ -10,9 +10,9 @@ const ShowStories = ({ type }) => {
     <React.Fragment>
       <Loader show={isLoading}>Loading...</Loader>
       <React.Fragment>
-        {stories.map(({ data: story }) => (
-          <Story key={story.id} story={story} />
-        ))}
+        {stories.map(
+          ({ data: story }) => story && <Story key={story.id} story={story} />
+        )}
       </React.Fragment>
     </React.Fragment>
   );
